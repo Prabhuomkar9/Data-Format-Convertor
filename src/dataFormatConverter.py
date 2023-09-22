@@ -10,7 +10,6 @@ class FileType(Enum):
 
 
 class FormatConvert:
-
     # define a function if same format
     @staticmethod
     def same_format(*pseudo: None) -> False:
@@ -19,7 +18,6 @@ class FormatConvert:
     # define a function to convert CSV to JSON
     @staticmethod
     def csv_to_json(csv_path: str, json_path: str) -> True:
-
         # conversion code
         df = pd.read_csv(csv_path)
         df.to_json(json_path, orient="records")
@@ -28,7 +26,6 @@ class FormatConvert:
     # define a function to convert JSON to CSV
     @staticmethod
     def json_to_csv(json_path: str, csv_path: str) -> True:
-
         # conversion code
         df = pd.read_json(json_path)
         df.to_csv(csv_path, index=False)
@@ -37,7 +34,6 @@ class FormatConvert:
     # define a function to convert CSV to XLSX
     @staticmethod
     def csv_to_xlsx(csv_path: str, xlsx_path: str) -> True:
-
         # conversion code
         df = pd.read_csv(csv_path)
         df.to_excel(xlsx_path, index=False)
@@ -46,7 +42,6 @@ class FormatConvert:
     # define a function to convert XLSX to CSV
     @staticmethod
     def xlsx_to_csv(xlsx_path: str, csv_path: str) -> True:
-
         # conversion code
         df = pd.read_excel(xlsx_path)
         df.to_csv(csv_path, index=False)
@@ -55,7 +50,6 @@ class FormatConvert:
     # define a function to convert JSON to XLSX
     @staticmethod
     def json_to_xlsx(json_path: str, xlsx_path: str) -> True:
-
         # conversion code
         df = pd.read_json(json_path)
         df.to_excel(xlsx_path, index=False)
@@ -64,7 +58,6 @@ class FormatConvert:
     # define a function to convert XLSX to JSON
     @staticmethod
     def xlsx_to_json(xlsx_path: str, json_path: str) -> True:
-
         # conversion code
         df = pd.read_excel(xlsx_path)
         df.to_json(json_path, orient="records")
@@ -73,7 +66,6 @@ class FormatConvert:
 
 def main() -> None:
     def success(booleanReturn) -> None:
-
         # indicating successful conversion
         if booleanReturn == True:
             print("Successfully converted!!!")
